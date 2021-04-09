@@ -1,7 +1,7 @@
 # spring-cloud-stream-sleuth
 Sample Repo for using Spring Cloud Stream with Spring Cloud Sleuth. 
 Contains two Spring Boot projects which each have a simple Spring Boot microservice. 
-Run them using `mvn spring-boot:run`
+Run them using `mvnw spring-boot:run`
 
 Start the Solace PubSub+ Event Broker & the OpenZipkin container before running apps & sending messages 
 
