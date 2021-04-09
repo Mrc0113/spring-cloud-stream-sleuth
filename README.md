@@ -12,3 +12,6 @@ Send messages to the `uppercase-in-0` topic using the Solace Try-Me tab in the P
 Listen to outgoing messages on the `reverse-out-0` topic. 
 
 See Span information in OpenZipkin at localhost:9411
+
+**Expected Flow**: 
+Try-Me Publisher -> uppercase-in-0 topic -> Uppercase Microservice (Trace starts here) -> uppercase-out-0 topic -> Reverse Microservice (Tracing still enabled here...same traceid, different span id) -> reverse-out-0 topic -> Try Me Consumer if you want
