@@ -14,3 +14,4 @@ docs/_site
 build/
 .idea
 target/
+bin/
