@@ -8,7 +8,7 @@ Solace: `docker run -d -p 8080:8080 -p 55555:55555 -p:8008:8008 -p:1883:1883 -p:
 
 OpenZipkin: `docker run -d -p 9411:9411 openzipkin/zipkin`
 
-Send messages to the `uppercase-in-0` topic using the Solace Try-Me tab in the PubSub+ Manager at localhost:8080. 
+Send messages to the `uppercase-in-0` topic using the Solace Try-Me tab in the PubSub+ Manager at localhost:8080 (login: admin/admin). 
 Listen to outgoing messages on the `reverse-out-0` topic. 
 
 See Span information in OpenZipkin at localhost:9411
