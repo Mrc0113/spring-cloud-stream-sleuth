@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: UppercaseApp
+  sleuth:
+#    propagation:
+#      type: AWS
+    sampler:
+      probability: 1.0
+  cloud: 
+    stream:  
+      binders:  
+      #This section of the configuration tells the solace binder how to connect to the solace event broker/mesh 
+        local-solace:  
+          type: solace 
+          environment: 
+            solace: 
+              java: 
+                host: tcp://localhost:4444 
+                msgVpn: default 
+                clientUsername: default 
+                clientPassword: default 
+                connectRetries: 3 
+                connectRetriesPerHost: 1 
+                reconnectRetries: 3 

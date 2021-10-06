@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.messaging.Message;
 
 @SpringBootApplication
 public class SpringCloudStreamSleuthApplication {
@@ -19,11 +20,11 @@ public class SpringCloudStreamSleuthApplication {
 	}
 	
 	@Bean
-	public Function<String, String> reverse(){
+	public Function<Message<String>, String> reverse(){
 		return v -> {
 			log.info("Received: " + v);
 			StringBuilder sb = new StringBuilder();
-			return sb.append(v).reverse().toString();
+			return sb.append(v.getPayload()).reverse().toString();
 		};
 	}
 	
